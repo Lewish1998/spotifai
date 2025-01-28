@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Create Playlist{% endblock %}
+
+{% block content %}
+<div class="mood-form">
+    <h1>Welcome, {{ username }}!</h1>
+    <p class="subtitle">Tell us how you're feeling, and we'll create the perfect playlist for you.</p>
+    
+    <form action="{{ url_for('playlist.create_playlist') }}" method="post">
+        <div class="form-group">
+            <label for="mood_prompt">How are you feeling?</label>
+            <textarea 
+                name="mood_prompt" 
+                id="mood_prompt" 
+                rows="4" 
+                placeholder="Example: I'm feeling energetic and ready to conquer the day!"
+                required
+            ></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Create Playlist</button>
+    </form>
+</div>
+{% endblock %}

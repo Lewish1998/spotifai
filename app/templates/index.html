@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+<div class="welcome-container">
+    <h1>Welcome to Mood Playlist Generator</h1>
+    <p>Create personalized Spotify playlists based on your mood using AI!</p>
+    <div class="login-section">
+        <a href="{{ url_for('auth.login') }}" class="spotify-login-btn">
+            Login with Spotify
+        </a>
+    </div>
+</div>
+{% endblock %}
